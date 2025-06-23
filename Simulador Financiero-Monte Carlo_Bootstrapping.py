@@ -184,8 +184,8 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 title=f'Distribución de Rendimientos Diarios - {ticker}',
                 xaxis_title='Rendimiento Diario',
                 yaxis_title='Densidad',
-                paper_bgcolor='black',
-                plot_bgcolor='black',
+                paper_bgcolor='rgba(0,0,0,0)',  # Fondo transparente
+                plot_bgcolor='rgba(0,0,0,0)',   # Fondo del gráfico transparente
                 font=dict(color='white', family='Arial, sans-serif'),
                 showlegend=False,
                 margin=dict(t=50, b=80, l=40, r=40),
@@ -194,6 +194,7 @@ if st.sidebar.button("📥 Descargar datos y ejecutar análisis"):
                 height=height_hist,
                 autosize=False
             )
+
 
             col_left, col_center, col_right = st.columns([1,6,1])
             with col_center:
